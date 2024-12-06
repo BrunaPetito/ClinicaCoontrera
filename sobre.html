@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="sobre.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="serv.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <h1>Conheça a história da criação da clínica</h1>
+            <p>A Clínica Coontrera nasceu de um sonho aliado à dedicação e ao profissionalismo. Com um início modesto, oferecíamos apenas serviços de fisioterapia e Mat Pilates, sempre pautados no cuidado e na qualidade. À medida que os pacientes e alunos cresceram, nosso espaço também evoluiu, permitindo a aquisição dos primeiros aparelhos e o desenvolvimento de novos serviços. Após anos de esforço e aprendizado, concretizamos o grande objetivo de criar uma clínica completa e reconhecida.</p>
+            <img src="imagem 9.jpg.jpg" alt="Foto das fundadoras">
+            <p>Com mais de seis anos de trajetória até sua consolidação, a Clínica Coontrera tornou-se referência em fisioterapia, pilates, hidroginástica e outros serviços de reabilitação e bem-estar em nossa cidade. Além dos atendimentos presenciais, oferecemos modalidades como home care, liberação miofascial, Dry Needling e quiropraxia clínica. Nossa equipe é formada por profissionais especializadas em fisioterapia, biomecânica da atividade física, pilates para diversas necessidades (incluindo gestantes) e hidroterapia, garantindo um atendimento personalizado e de excelência.</p>
+        </section>
+
+        <div class="carrossel">
+            <div class="slides">
+                <img src="imagem 1.jpg.jpg" alt="Imagem 1">
+                <img src="imagem 2.jpg.jpg" alt="Imagem 2">
+                <img src="imagem 3. jpg.jpg" alt="Imagem 3">
+                <img src="imagem 4.jpg.jpg" alt="Imagem 4">
+                <img src="imagem 5.jpg.jpg" alt="Imagem 5">
+                <img src="imagem 6.jpg.jpg" alt="Imagem 6">
+                <img src="imagem 7.jpg.jpg" alt="Imagem 7">
+                <img src="imagem 8.jpg.jpg" alt="Imagem 8">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <footer>
+        <p> @contrera.pilatesefisioterapia</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slides img').length;
+
+            slideIndex += direction;
+
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            }
+
+            slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>

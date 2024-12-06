@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Afacad', sans-serif;
+    line-height: 1.6;
+    background-color: #F6F0F6;
+    color: #8c4dab;
+}
+
+header {
+    background-color: #F6F0F6;
+    color: white;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #8c4dab;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.about-us {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    font-size: 1rem;
+    color:#6e3f7e;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-us img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    height: auto;
+}
+
+.carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.carrossel .prev {
+    left: 10px;
+}
+
+.carrossel .next {
+    right: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #b072c599 ;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Menu em coluna para telas menores */
+        text-align: center;
+    }
+
+    .about-us h1 {
+        font-size: 1.5rem; /* Texto menor */
+    }
+
+    .about-us p {
+        font-size: 0.9rem;
+    }
+
+    .carrossel button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-us h1 {
+        font-size: 1.25rem;
+    }
+
+    .about-us p {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
